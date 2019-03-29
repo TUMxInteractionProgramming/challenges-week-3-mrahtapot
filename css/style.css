@@ -41,6 +41,13 @@ ul {
     background-color: white;
     /* #3 #channels #bullets removed */
     list-style-type: none;
+    /* Overflow for scrolling and the position*/
+    overflow: auto;
+    position: absolute;
+    top: 70px;
+    bottom: 72px;
+    left: 0px;
+    right: 0px;
 }
 
 li {
@@ -67,11 +74,17 @@ li img {
 /* TAB BAR */
 
 /* #4 #sweat #tab-bar */
-#tab-bar {
+#tab-bar, #chat-bar {
     /* #3 #tab-bar #container should be white */
     background-color: white;
     /* #3 #tab-bar #container has all buttons centered */
     text-align: center;
+    /*flexbox is set and the position is determined*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
 }
 
 /* #4 add styles to #tab-bar #buttons */
@@ -84,6 +97,10 @@ li img {
     width: 33%;
     height: 72px;
     padding: 16px;
+
+    /*The flex of the buttons are fixed*/
+    flex-basis: 100%;
+    text-align: center;
 }
 
 /* #4 #tab-bar buttons do have a #line-break and images are centered due to the left&right auto margin */
@@ -115,6 +132,9 @@ li img {
 
 .message h3 {
     font-size: medium;
+    /*The space between the location date and the tll is set*/
+    display: flex;
+    justify-content: space-between;
 }
 
 .message h3 em {
@@ -136,6 +156,11 @@ li img {
     background-color: #CDDC39;
     color: black;
     text-transform: uppercase;
+
+    /*Button location is changed*/
+    position: relative;
+    bottom: 25px;
+    left: 642px;
 }
 
 /* #4 left align own #messages using #margins */
@@ -143,3 +168,52 @@ li img {
     margin-left: 17.5%;
 }
 
+#channels {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 60%;
+    height: 100%;
+}
+
+#chat {
+    /*location of the chat side is determined*/
+    position: absolute;
+    top: 0%;
+    left: 40%;
+    right: 0%;
+    height: 100%;
+}
+ 
+/*Emoji button is placed*/
+#chat-bar button {
+    background-color: white;
+    border: none;
+    font-size: 13px;
+
+    width: 10%;
+    height: 72px;
+    padding: 16px;
+    
+}
+
+
+div h1 {
+    /*The dimensions and the text of the upper bars are determined*/
+    height: 30px;
+    text-indent: 70px;
+    padding: 20px 0px;
+}
+
+div h1 img {
+    /*Location of the #moocus changed*/
+    position: absolute;
+    top: 14px;
+    left: 16px;
+}
+
+.channel-meta {
+    /*Position of the star and arrow buttons are changed*/
+    position: absolute;
+    right: 15px;
+}
